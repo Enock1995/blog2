@@ -181,10 +181,6 @@ footer {
  .footer-links{
      background-color: #4615ff;
  }
-
- .main-class{
-  display: flex !important;
- }
  
  @media(max-width: 768px){ .link-list, .link-list a{
      background: #0f2658 !important;
@@ -257,9 +253,10 @@ form textarea:focus {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  font-size: 2rem;
   transition: color 0.3s;
   background: #0f2658 ! important;
-  border: 0.1px solid white !important;
+  border: 0px solid white !important;
 }
 
 .social-links a:hover {
