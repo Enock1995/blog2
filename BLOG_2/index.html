@@ -445,9 +445,48 @@ visit our <a href="#about" class="deco-white">about section</a> to see more abou
   <!--/.Copyright--> 
 
 
+<!-- Visitors Counter -->
+<div id="visitor-stats" style="color: white; background: #05051c; padding: 15px; text-align: center; font-family: 'Inter', sans-serif; margin-top: 30px; border-radius: 8px;">
+  <p>👁 Total Views: <span id="totalViews">...</span></p>
+  <p>👤 Unique Visitors: <span id="uniqueViews">...</span></p>
+</div>
+
+
   <!-- custom js -->
    <script src="assets/js/custom.js"></script>
 
+
+
+<script>
+// Replace this with your own CountAPI namespace/key if needed
+const NAMESPACE = "sirenocks_blog2";
+const TOTAL_KEY = "total_views";
+const UNIQUE_KEY = "unique_views";
+
+// Count total views
+fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${TOTAL_KEY}`)
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("totalViews").textContent = data.value;
+  });
+
+// Count unique views using localStorage
+if (!localStorage.getItem("hasVisited")) {
+  fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${UNIQUE_KEY}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("uniqueViews").textContent = data.value;
+      localStorage.setItem("hasVisited", true);
+    });
+} else {
+  // Get current unique count (but don't increase)
+  fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${UNIQUE_KEY}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("uniqueViews").textContent = data.value;
+    });
+}
+</script>
 
   </body>
 </html>
