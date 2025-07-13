@@ -45,10 +45,8 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#gallery">Gallery</a></li>
+     
       <li><a href="#contact">Contact</a></li>
-
-      <li><a href="#tutorials">Tutorials</a></li>
 
     </ul> <!-- end of list -->
   </nav> <!-- end of navigation bar--> 
@@ -199,7 +197,7 @@ Let's work together, no matter the distance!</span>  </div>
 
 
       <!-- image -->
-      <img src="assets/files/sect6.jpg" alt="Project Screenshot">
+      <img src="assets/files/sect96.png" alt="Project Screenshot">
 
     <center>  <span class="monospace color-white" style="font-size: 0.8rem">Sir Enocks Cor Technologies</span></center>
 
@@ -208,110 +206,6 @@ Let's work together, no matter the distance!</span>  </div>
 
   </div> <!-- end of another distance -->
   <!-- end of grid items -->
-
-   <!-- Overflowing media-->
-   <div class="overflowing-imgs" id="gallery"><br>
-       <center>
-       <h1 class="text-center text-white">
-Images Gallery
-       </h1></center><br>
-
-       <div class="image-container">
-
-    <div class="img">
-
-  <img src="assets/files/sect1.jpg" alt="">
-
-   </div>
-
- <div class="img">
-
-  <img src="assets/files/sect2.jpg" alt=""> </div>
-
-  <div class="img">
-
-  <img src="assets/files/sect3.jpg" alt=""> </div>
-
-  <div class="img">
-
-  <img src="assets/files/sect4.jpg" alt=""> 
-  </div>
-
-  <div class="img">
-
-  <img src="assets/files/sect5.jpg" alt="">  </div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect6.jpg" alt=""></div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect7.jpg" alt=""> </div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect8.jpg" alt=""> </div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect9.jpg" alt=""></div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect91.jpg" alt=""> </div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect92.jpg" alt="">  </div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect93.jpg" alt=""> </div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect94.jpg" alt=""> </div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect95.jpg" alt=""></div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect96.png" alt="">  </div> 
-
-   <div class="img">
-
-  <img src="assets/files/sect97.png" alt=""> </div>
-
-   <div class="img">
-
-  <img src="assets/files/business_card.jpg" alt=""> </div>  
-
-  <br><br>
-</div>
-   </div><br><br><!-- end of overflow images-->
-
-
-  <!-- gallery -->
-  <section class="container d-md-false" id="gallery">
-    <div class="card" data-animate>
-      <h2>Image Gallery</h2>
-
-
-      <!-- images -->
-      <div>
-
-      <img src="assets/files/sect1.jpg" alt="Gallery Image 1">
-
-      <img src="assets/files/sect4.jpg" alt="Gallery Image 2">
-
-    <img src="assets/files/sect96.png" alt="Gallery Image 2">  </div>
-
-    </div>
-
-  </section> <!-- end of Gallery images--> 
 
 
   <!-- Contact us -->
@@ -383,29 +277,9 @@ Images Gallery
               
               <a href="certificates.html" class="color-navy deco-f">- Personal Certifications</a><br>
 
-                 <a href="#" class="color-navy deco-f">- Sir Enocks Cor Institute Of IT</a><br>
+                 <a href="https://seitportal.wuaze.com/Project1" class="color-navy deco-f">- Sir Enocks Institute Technology</a><br>
 
           </li> <!-- End of projects -->
-
-
-          <!-- Tutorials section-->
-          <li class="grid-items link-list mb-2">
-            <h3 class="verdana" id="tutorials">Tutorials</h3> 
-
-            <a href="#" class="color-navy deco-f verdana"> - HTML</a><br>
-
-            <a href="#" class="verdana deco-f color-navy"> - CSS</a><br>
-
-            <a href="#" class="verdana deco-f color-navy"> - JavaScript</a><br>
-
-            <a href="#" class="verdana deco-f color-navy"> - PHP</a><br>
-
-            <a href="#" class="verdana deco-f color-navy"> - SQL</a><br>
-
-            <a href="#" class="verdana deco-f color-navy"> - Excel</a><br>
-
-
-          </li><!-- end of tutorials-->
 
 
           <!-- about  us section-->
@@ -445,48 +319,8 @@ visit our <a href="#about" class="deco-white">about section</a> to see more abou
   <!--/.Copyright--> 
 
 
-<!-- Visitors Counter -->
-<div id="visitor-stats" style="color: white; background: #05051c; padding: 15px; text-align: center; font-family: 'Inter', sans-serif; margin-top: 30px; border-radius: 8px;">
-  <p>👁 Total Views: <span id="totalViews">...</span></p>
-  <p>👤 Unique Visitors: <span id="uniqueViews">...</span></p>
-</div>
-
-
   <!-- custom js -->
    <script src="assets/js/custom.js"></script>
-
-
-
-<script>
-// Replace this with your own CountAPI namespace/key if needed
-const NAMESPACE = "sirenocks_blog2";
-const TOTAL_KEY = "total_views";
-const UNIQUE_KEY = "unique_views";
-
-// Count total views
-fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${TOTAL_KEY}`)
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("totalViews").textContent = data.value;
-  });
-
-// Count unique views using localStorage
-if (!localStorage.getItem("hasVisited")) {
-  fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${UNIQUE_KEY}`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById("uniqueViews").textContent = data.value;
-      localStorage.setItem("hasVisited", true);
-    });
-} else {
-  // Get current unique count (but don't increase)
-  fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${UNIQUE_KEY}`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById("uniqueViews").textContent = data.value;
-    });
-}
-</script>
 
   </body>
 </html>
